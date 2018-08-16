@@ -1,10 +1,13 @@
 class PagesController < ApplicationController
-  def home
-  end
+# layout "mi_layout", only: [:hello] #Pasar atributos y cambiar layout de paginas,
 #about_us ruta , metodo y vista q se llame igual al metodo
 
 def about_us
   @greeting = "Lorem ipsum dolor"
+end
+
+def hello
+    @name = params[:name]
 end
 
 #contact   direccion y telefono ,
@@ -13,7 +16,8 @@ def contact
 end
 
 #posts array de strings
-def posts
-  @posts = ["publicacion 1", "publicacion 2"]
-end
+# def posts
+#   @posts = Post.all
+# end
+
 end
